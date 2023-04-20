@@ -1,0 +1,57 @@
+/* Write your CSS here */
+.images {
+  width: 50px;
+  z-index: 10;
+}
+.app-name {
+  font-family: 'Bree Serif';
+  color: #1e293b;
+  font-weight: 800;
+  z-index: 10;
+}
+.app-items-list {
+  position: relative;
+  background-color: #ffff;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.app-items-list:hover:before {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 140%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 5s linear infinite;
+  transition: 0.5s;
+}
+.app-items-list:after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background-color: #ffff;
+  border-radius: 5px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.app-items-list:hover {
+  box-shadow: 5px 5px 5px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+}
